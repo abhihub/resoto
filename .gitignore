@@ -27,7 +27,7 @@ docs/_build/
 .DS_Store
 .coverage
 .dccache
-resotoshell/backup_*
+backup_*
 resotocore/tools/Assets
 out/
 *.iml

@@ -12,7 +12,7 @@ from resotocore.db import EstimatedSearchCost, EstimatedQueryCostRating as Ratin
 from resotocore.db.arangodb_functions import as_arangodb_function
 from resotocore.db.model import QueryModel
 from resotocore.model.graph_access import Section, Direction
-from resotocore.model.model import SyntheticProperty, ResolvedProperty
+from resotocore.model.model import SyntheticProperty, ResolvedProperty, ComplexKind
 from resotocore.model.resolve_in_graph import GraphResolver
 from resotocore.query.model import (
     Predicate,
@@ -284,6 +284,10 @@ def query_string(
                 for kind in t.kinds:
                     if kind in GraphResolver.resolved_ancestors:
                         return kind
+                    kd = model.get(kind)
+                    for base in kd.bases if isinstance(kd, ComplexKind) else []:
+                        if base in GraphResolver.resolved_ancestors:
+                            return base
                 return None
 
             # noinspection PyTypeChecker
