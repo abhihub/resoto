@@ -3,7 +3,7 @@ jsons==1.6.2
 typeguard==2.13.3
 websocket-client==1.3.2
 psutil==5.9.1
-requests==2.27.1
+requests==2.31.0
 prometheus-client==0.14.1
 PyJWT==2.4.0
 CherryPy==18.6.1
