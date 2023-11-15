@@ -7,3 +7,4 @@ resotolib==2.4.0a0
 
 setuptools~=62.3.3
 jsons~=1.6.2
+aiohttp>=3.8.6 # not directly required, pinned by Snyk to avoid a vulnerability
