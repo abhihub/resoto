@@ -3,3 +3,4 @@ requests-toolbelt==0.9.1
 rich==12.4.4
 resotolib==2.4.0a0
 resotoclient==0.1.12
+requests>=2.32.0 # not directly required, pinned by Snyk to avoid a vulnerability
