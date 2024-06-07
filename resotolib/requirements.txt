@@ -7,7 +7,7 @@ requests==2.27.1
 prometheus-client==0.14.1
 PyJWT==2.4.0
 CherryPy==18.6.1
-cryptography==37.0.2
+cryptography==42.0.8
 aiohttp[speedups]==3.8.1
 Pint==0.19.2
 parsy==1.4.0
